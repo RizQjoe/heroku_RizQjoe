@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset = "utf-8">
+    <title></title>
+  </head>
+
+  <body>
+    <h1>Halaman Add Teacher</h1>
+
+    <form class="" style="margin-top:10px;" action="/teachers/addTeachers/ %>" method="POST">
+      <input type="text" name="first_name" placeholder="Masukan Nama Depan">
+      <input type="text" name="last_name" placeholder="Masukan Belakang">
+      <input type="text" name="email" placeholder="Masukan Email">
+      <select class="" name="subjectsId">
+        <% data.forEach(subjects => { %>
+        <option value="<%= subjects.id%>"><%= subjects.subject_name %></option>
+      <% }) %>
+      </select>
+      <input type="submit" value="SUBMIT">
+    </form>
+  </body>
+</html>

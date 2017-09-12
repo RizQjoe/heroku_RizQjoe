@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 14px;
+}
+
+td, th {
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+}
+
+tr:nth-child(even){
+  background-color: #f2f2f2
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+</style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>Subject name</th>
+          <th>Create At</th>
+          <<th>Update At</th>
+        </tr>
+      </thead>
+    <tbody>
+      <%data.forEach( row =>{ %>
+      <tr>
+        <td><%= row.id %></td>
+        <td><%= row.subject_name %></td>
+        <td><%= row.createdAt %></td>
+        <td><%= row.updatedAt %></td>
+      </tr>
+      <%})%>
+  </tbody>
+</table>
+<!-- <button type="button" onclick="alert('Hello world!')">Click Me!</button> -->
+
+  </body>
+</html>
